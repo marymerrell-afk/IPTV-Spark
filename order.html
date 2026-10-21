@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Complete your order – TVFlex</title>
+  <meta name="description" content="Enter your contact details and device so TVFlex can activate your subscription after payment." />
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="order-page">
+  <a class="skip-link" href="#order-form">Skip to order form</a>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="logo" href="index.html" aria-label="TVFlex home">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span class="logo-text">TVFlex</span>
+      </a>
+      <a class="btn btn-ghost header-cta" href="index.html#pricing" style="display:inline-flex;margin-left:auto">Back to plans</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="thanks-hero">
+      <div class="shell thanks-hero-inner">
+        <p class="thanks-kicker">Step 1 of 2</p>
+        <h1>Tell us how to reach you.</h1>
+        <p class="thanks-lede">
+          Add WhatsApp or email (or both), pick your device, then continue to payment details.
+        </p>
+        <div class="order-summary" aria-live="polite">
+          <div>
+            <span class="order-label">Selected plan</span>
+            <strong id="order-plan">TVFlex subscription</strong>
+          </div>
+          <div>
+            <span class="order-label">Amount due</span>
+            <strong id="order-price">See pricing</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell order-layout">
+        <form class="order-form" id="order-form" novalidate>
+          <div class="form-group">
+            <label for="customer-name">Name <span class="optional">(optional)</span></label>
+            <input id="customer-name" name="name" type="text" autocomplete="name" placeholder="Your name" />
+          </div>
+
+          <div class="form-group">
+            <label for="customer-whatsapp">WhatsApp number</label>
+            <input
+              id="customer-whatsapp"
+              name="whatsapp"
+              type="tel"
+              autocomplete="tel"
+              inputmode="tel"
+              placeholder="+1 555 000 0000"
+            />
+            <p class="field-hint">Include country code so we can message you.</p>
+          </div>
+
+          <div class="form-group">
+            <label for="customer-email">Email</label>
+            <input
+              id="customer-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="you@example.com"
+            />
+          </div>
+
+          <p class="form-requirement" id="contact-requirement" role="status">
+            Enter at least a WhatsApp number or an email.
+          </p>
+
+          <div class="form-group">
+            <label for="customer-device">Your device</label>
+            <select id="customer-device" name="device" required>
+              <option value="" disabled selected>Select your device</option>
+              <option value="Smart TV">Smart TV</option>
+              <option value="Android phone / box">Android phone / box</option>
+              <option value="Amazon Fire Stick">Amazon Fire Stick</option>
+              <option value="Apple TV / iOS">Apple TV / iOS</option>
+              <option value="MAG box">MAG box</option>
+              <option value="Kodi">Kodi</option>
+              <option value="Windows / PC">Windows / PC</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group" id="device-other-group" hidden>
+            <label for="device-other">Describe your device</label>
+            <input id="device-other" name="device_other" type="text" placeholder="e.g. Samsung Tizen TV" />
+          </div>
+
+          <p class="form-error" id="form-error" hidden></p>
+
+          <button class="btn btn-primary order-submit" type="submit" id="order-submit">
+            Continue to payment
+          </button>
+          <p class="form-footnote">
+            Your details are sent to our support team automatically when you continue. Next you’ll get bank transfer details—we’ll contact you after payment.
+          </p>
+        </form>
+
+        <aside class="order-aside">
+          <div class="steps-panel">
+            <h2>What happens next</h2>
+            <ol class="thanks-steps">
+              <li>
+                <span>01</span>
+                <div>
+                  <strong>Share your details</strong>
+                  <p>So we know how to contact you and which device to set up.</p>
+                </div>
+              </li>
+              <li>
+                <span>02</span>
+                <div>
+                  <strong>Pay by bank transfer</strong>
+                  <p>You’ll get the US bank details on the next page.</p>
+                </div>
+              </li>
+              <li>
+                <span>03</span>
+                <div>
+                  <strong>We activate you</strong>
+                  <p>After payment clears, we send your login / playlist.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p class="footer-brand">TVFlex</p>
+      <p class="footer-copy">Copyright © 2023–2026 TVFlex. All rights reserved.</p>
+      <nav class="footer-nav" aria-label="Support">
+        <a href="mailto:m3808206@gmail.com">Email</a>
+        <a href="https://wa.me/+212629917205?text=Hi%20I%20would%20like%20to%20get%20this%20offer">WhatsApp</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
